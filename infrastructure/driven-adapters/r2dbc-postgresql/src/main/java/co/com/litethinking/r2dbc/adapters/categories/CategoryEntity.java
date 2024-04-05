@@ -1,4 +1,4 @@
-package co.com.litethinking.r2dbc.adapters.company;
+package co.com.litethinking.r2dbc.adapters.categories;
 
 import co.com.litethinking.r2dbc.adapters.product.ProductEntity;
 import jakarta.persistence.ManyToMany;
@@ -13,22 +13,19 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.List;
 
-@Table("TBL_LT_COMPANY")
+
+@Table("TBL_LT_CATEGORY")
 @Data
 @ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CompanyEntity {
+public class CategoryEntity {
     @Id
-    @Column("PK_COMPANY_NIT")
-    private String nit;
+    @Column("PK_CATEGORY_CODE")
+    private String code;
     @Column("NAME")
     private String name;
-    @Column("ADDRESS")
-    private String address;
-    @Column("TELEPHONE")
-    private String telephone;
     @ManyToMany(targetEntity = ProductEntity.class)
     private List<ProductEntity> productsSet;
 }

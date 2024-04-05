@@ -1,7 +1,7 @@
-package co.com.litethinking.r2dbc.adapters.company;
+package co.com.litethinking.r2dbc.adapters.client;
 
-import co.com.litethinking.r2dbc.adapters.product.ProductEntity;
-import jakarta.persistence.ManyToMany;
+import co.com.litethinking.r2dbc.adapters.order.OrderEntity;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.Builder;
 import lombok.ToString;
@@ -13,22 +13,23 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.List;
 
-@Table("TBL_LT_COMPANY")
+@Table("TBL_LT_CLIENT")
 @Data
 @ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CompanyEntity {
+public class ClientEntity {
     @Id
-    @Column("PK_COMPANY_NIT")
-    private String nit;
+    @Column("PK_CLIENT_IDENTIFICATION")
+    public String clientIdentification;
     @Column("NAME")
-    private String name;
+    public String name;
     @Column("ADDRESS")
-    private String address;
+    public String address;
     @Column("TELEPHONE")
-    private String telephone;
-    @ManyToMany(targetEntity = ProductEntity.class)
-    private List<ProductEntity> productsSet;
+    public String telephone;
+    @OneToMany(mappedBy = "client")
+    private List<OrderEntity> ordersSet;
+
 }
