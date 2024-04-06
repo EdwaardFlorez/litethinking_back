@@ -1,9 +1,9 @@
-package co.com.litethinking.r2dbc.util;
+package co.com.liteThinking.r2dbc.util;
 
-import co.com.litethinking.model.company.Company;
-import co.com.litethinking.r2dbc.adapters.company.CompanyEntity;
+import co.com.liteThinking.model.company.Company;
+import co.com.liteThinking.r2dbc.adapters.company.CompanyEntity;
 
-public class CodeBuilder {
+public class CodeBuilderAdapters {
     public CompanyEntity toTransferEntityCompany(Company company) {
         return CompanyEntity.builder()
                 .nit(company.getNit())

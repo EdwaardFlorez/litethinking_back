@@ -1,6 +1,6 @@
-package co.com.litethinking.r2dbc.adapters.categories;
+package co.com.liteThinking.r2dbc.adapters.categories;
 
-import co.com.litethinking.r2dbc.adapters.product.ProductEntity;
+import co.com.liteThinking.r2dbc.adapters.product.ProductEntity;
 import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package co.com.litethinking.r2dbc.adapters.client;
+package co.com.liteThinking.r2dbc.adapters.client;
 
-import co.com.litethinking.r2dbc.adapters.order.OrderEntity;
+import co.com.liteThinking.r2dbc.adapters.order.OrderEntity;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.Builder;
@@ -22,13 +22,13 @@ import java.util.List;
 public class ClientEntity {
     @Id
     @Column("PK_CLIENT_IDENTIFICATION")
-    public String clientIdentification;
+    private String clientIdentification;
     @Column("NAME")
-    public String name;
+    private String name;
     @Column("ADDRESS")
-    public String address;
+    private String address;
     @Column("TELEPHONE")
-    public String telephone;
+    private String telephone;
     @OneToMany(mappedBy = "client")
     private List<OrderEntity> ordersSet;
 

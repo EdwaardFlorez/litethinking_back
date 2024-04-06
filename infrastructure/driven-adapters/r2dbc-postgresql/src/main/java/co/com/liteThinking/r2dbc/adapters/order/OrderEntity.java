@@ -1,7 +1,7 @@
-package co.com.litethinking.r2dbc.adapters.order;
+package co.com.liteThinking.r2dbc.adapters.order;
 
-import co.com.litethinking.r2dbc.adapters.client.ClientEntity;
-import co.com.litethinking.r2dbc.adapters.product.ProductEntity;
+import co.com.liteThinking.r2dbc.adapters.client.ClientEntity;
+import co.com.liteThinking.r2dbc.adapters.product.ProductEntity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;

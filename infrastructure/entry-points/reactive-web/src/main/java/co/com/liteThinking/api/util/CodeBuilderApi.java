@@ -3,9 +3,8 @@ package co.com.liteThinking.api.util;
 import co.com.liteThinking.api.request.RequestCreateCompany;
 import co.com.liteThinking.api.response.DataResponse;
 import co.com.liteThinking.model.company.Company;
-import org.springframework.stereotype.Component;
 
-public class CodeBuilder {
+public class CodeBuilderApi {
     public DataResponse responseBuilder(Company company, String action){
         return DataResponse.builder()
                 .idRequest(company.getNit())
