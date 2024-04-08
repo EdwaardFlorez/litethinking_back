@@ -20,7 +20,14 @@ tasks.register('explodedJar', Copy) {
 
 jar {
     // To disable the *-plain.jar
-    enabled = false
+    manifest {
+        /*attributes(
+                'Class-Path': configurations.runtimeClasspath.files.collect { it.getName() }.join(' '),
+                'Main-Class': 'co.com.litethinking.MainApplication'
+        )*/
+        attributes 'Main-Class': 'co.com.litethinking.MainApplication'
+    }
+    enabled = true
 }
 
 bootJar {
